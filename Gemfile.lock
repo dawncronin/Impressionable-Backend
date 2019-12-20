@@ -63,6 +63,8 @@ GEM
     concurrent-ruby (1.1.5)
     crass (1.0.5)
     erubi (1.9.0)
+    faker (2.9.0)
+      i18n (>= 1.6, < 1.8)
     fast_jsonapi (1.5)
       activesupport (>= 4.2)
     ffi (1.11.3)
@@ -155,9 +157,10 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
+  faker
   fast_jsonapi
   listen (>= 3.0.5, < 3.2)
-  pg (>= 0.18, < 2.0)
+  pg (~> 1.1.4)
   puma (~> 4.1)
   rack-cors
   rails (~> 6.0.2, >= 6.0.2.1)
