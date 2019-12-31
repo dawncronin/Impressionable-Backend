@@ -1,4 +1,4 @@
 class ImpressionSerializer
   include FastJsonapi::ObjectSerializer
-  attributes 
+  attributes :user_id, :celebrity_id, :match_score, :audio
 end

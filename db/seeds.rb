@@ -11,7 +11,7 @@ require "faker"
   Celebrity.create!(
     name: Faker::TvShows::FamilyGuy.character,
     description: Faker::Quote.famous_last_words,
-    image: Faker::Avatar.image(slug: "my-own-slug", size: "50x50"),
+    image: Faker::Avatar.image(size: "10x10"),
     audio_text: Faker::TvShows::FamilyGuy.quote,
   )
 end

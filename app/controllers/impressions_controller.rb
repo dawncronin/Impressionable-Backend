@@ -1,12 +1,19 @@
 class ImpressionsController < ApplicationController
+    def index
+        impressions = Impression.all 
+        render json: impressions
+        
+    end
     def create
-        impression = Impression.create(impression_params)
-        render json: ImpressionSerializer.new(impression)
+        impression = Impression.create!(impression_params)
+        impression.audio.attach(impression_params[:audio])
+        render json: impression
+        # render json: ImpressionSerializer.new(impression)
     end
 
     private
 
     def impression_params
-        params.require(:impression).permit(:user_id, :celebrity_id, :audio_file, :match_score)
+        params.require(:impression).permit(:user_id, :celebrity_id, :audio, :match_score)
     end
 end
