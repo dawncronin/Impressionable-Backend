@@ -7,35 +7,18 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require "faker"
 
-10.times do
-  bob = Celebrity.create!(
-    name: Faker::TvShows::FamilyGuy.character,
-    description: Faker::Quote.famous_last_words,
+
+  chewy = Celebrity.create(
+    name: "Chewbacca",
+    description: "Star Wars Character",
     image: Faker::Avatar.image(size: "10x10"),
-    audio_text: Faker::TvShows::FamilyGuy.quote,
+    audio_text: "Wawaaawawa",
   )
+  chewy.audio.attach(io: File.open('../chewbacca.mp3'), filename: 'chewbacca.mp3')
 
-  bob.audio.attach(io: File.open('../chewbacca.mp3'), filename: 'chewbacca.mp3')
-end
+  puts chewy.audio_url = chewy.audio_url
+  chewy.save
 
-# 10.times do
-#   User.create!(
-#     username: Faker::Internet.username,
-#   )
-# end
 
-# 10.times do
-#   Impression.create!(
-#     user_id: rand((User.all.first.id)..(User.all.last.id)),
-#     celebrity_id: rand((Celebrity.all.first.id)..(Celebrity.all.last.id)),
-#     match_score: Faker::Number.between(from: 1, to: 99),
-#   )
-# end
 
-# 10.times do
-#   Like.create!(
-#     user_id: rand((User.all.first.id)..(User.all.last.id)),
-#     impression_id: rand((Impression.all.first.id)..(Impression.all.last.id)),
-#   )
-# end
 
