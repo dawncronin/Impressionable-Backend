@@ -16,10 +16,4 @@ class CelebritiesController < ApplicationController
 
     end
 
-    def audio
-        celebrity = Celebrity.find(params[:id])
-
-       render json: {link: url_for(celebrity.audio)}
-    end
-
 end

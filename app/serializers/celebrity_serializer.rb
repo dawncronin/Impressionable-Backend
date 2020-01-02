@@ -5,7 +5,4 @@ class CelebritySerializer
   has_many :impressions
   has_many :users, through: :impressions
 
-  # def audio_url
-  #   rails_blob_path(object.audio, only_path: true)
-  # end
 end
