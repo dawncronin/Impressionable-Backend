@@ -64,6 +64,51 @@ require "faker"
   puts effie.audio_url = effie.audio_url
   effie.save
 
+  peter = Celebrity.create(
+    name: "Peter Griffin",
+    description: "Family Guy Character",
+    image: "https://vignette.wikia.nocookie.net/great-characters/images/9/95/Peterbirdistheword.jpeg/revision/latest?cb=20181216010431",
+    audio_text: "Oh, no. Someone peed in my pants",
+  )
+  peter.audio.attach(io: File.open('../peter.mp3'), filename: 'peter.mp3')
+
+  puts peter.audio_url = peter.audio_url
+  peter.save
+
+
+  forest = Celebrity.create(
+    name: "Forest Gump",
+    description: "Character from Forest Gump",
+    image: "http://collider.com/wp-content/uploads/2019/06/forrest-gump-bench.jpg",
+    audio_text: "Mama always said, life is like a box of chocolates, you never know what you're gonna get",
+  )
+  forest.audio.attach(io: File.open('../forest.mp3'), filename: 'forest.mp3')
+
+  puts forest.audio_url = forest.audio_url
+  forest.save
+
+  terminator = Celebrity.create(
+    name: "The Terminator",
+    description: "Character from Terminator",
+    image: "https://townsquare.media/site/295/files/2019/10/Terminator-Orion.jpg?w=980&q=75",
+    audio_text: "I'll Be Back",
+  )
+  terminator.audio.attach(io: File.open('../terminator.mp3'), filename: 'terminator.mp3')
+
+  puts terminator.audio_url = terminator.audio_url
+  terminator.save
+
+  et = Celebrity.create(
+    name: "E. T.",
+    description: "Character from E. T.",
+    image: "https://www.irishtimes.com/polopoly_fs/1.3293044.1510764445!/image/image.jpg_gen/derivatives/box_620_330/image.jpg",
+    audio_text: "E. T phone home",
+  )
+  et.audio.attach(io: File.open('../et.mp3'), filename: 'et.mp3')
+
+  puts et.audio_url = et.audio_url
+  et.save
+
 
 
 
