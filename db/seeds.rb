@@ -30,6 +30,31 @@ require "faker"
   puts scarface.audio_url = scarface.audio_url
   scarface.save
 
+  gollum = Celebrity.create(
+    name: "Gollum",
+    description: "Lord of the Rings Character",
+    image: "https://www.thesun.co.uk/wp-content/uploads/2019/03/NINTCHDBPICT0004777086082.jpg",
+    audio_text: "My precious",
+  )
+  gollum.audio.attach(io: File.open('../gollum.mp3'), filename: 'gollum.mp3')
+
+  puts gollum.audio_url = gollum.audio_url
+  gollum.save
+
+
+  yoda = Celebrity.create(
+    name: "Yoda",
+    description: "Star Wars Character",
+    image: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/baby-yoda-old-yoda-1574103229.jpg?crop=0.486xw:0.973xh;0.514xw,0&resize=480:*",
+    audio_text: "Do, or do not. There is no try",
+  )
+  yoda.audio.attach(io: File.open('../yoda.mp3'), filename: 'yoda.mp3')
+
+  puts yoda.audio_url = yoda.audio_url
+  yoda.save
+
+
+
 
 
 
