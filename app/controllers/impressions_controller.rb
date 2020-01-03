@@ -17,6 +17,12 @@ class ImpressionsController < ApplicationController
         render json: {id: impression.id, link: url_for(impression.audio_impression), user_id: impression.user.id, username: impression.user.username}
     end
 
+    def destroy
+        imp = Impression.find(params[:id])
+        imp.audio_impression.destroy
+        imp.destroy
+    end
+
     private
 
     def impression_params

@@ -22,6 +22,12 @@ class UsersController < ApplicationController
         render json: UserSerializer.new(user)
     end
 
+    def destroy
+        user = User.find(params[:id])
+        user.impressions.destroy_all
+        user.destroy
+    end
+
     private
 
     def user_params
