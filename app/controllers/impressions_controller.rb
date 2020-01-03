@@ -9,12 +9,12 @@ class ImpressionsController < ApplicationController
         impression = Impression.create!(impression_params)
         impression.audio_impression.attach(impression_params[:audio_impression])
         # render json: impression
-        render json: {id: impression.id, link: url_for(impression.audio_impression), user_id: impression.user.id, username: impression.user.username}
+        render json: {id: impression.id, match_score: impression.match_score, link: url_for(impression.audio_impression), user_id: impression.user.id, username: impression.user.username}
     end
 
     def audio
         impression = Impression.find(params[:id])
-        render json: {id: impression.id, link: url_for(impression.audio_impression), user_id: impression.user.id, username: impression.user.username}
+        render json: {id: impression.id, match_score: impression.match_score, link: url_for(impression.audio_impression), user_id: impression.user.id, username: impression.user.username}
     end
 
     def destroy

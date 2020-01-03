@@ -53,6 +53,17 @@ require "faker"
   puts yoda.audio_url = yoda.audio_url
   yoda.save
 
+  effie = Celebrity.create(
+    name: "Effie Trinket",
+    description: "Hunger Games Character",
+    image: "https://i.pinimg.com/originals/b1/a4/c0/b1a4c002ee4a635386d52e3005b1fe1d.jpg",
+    audio_text: "May the odds be ever in your favor",
+  )
+  effie.audio.attach(io: File.open('../effie.mp3'), filename: 'effie.mp3')
+
+  puts effie.audio_url = effie.audio_url
+  effie.save
+
 
 
 
