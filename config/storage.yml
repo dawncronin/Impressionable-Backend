@@ -15,7 +15,7 @@ local:
 #   bucket: your_own_bucket
 
 # Remember not to checkin your GCS keyfile to a repository
-# google:
+google:
   service: GCS
   project: impresionable
   credentials: <%= Rails.root.join("config/secrets/impressionable-df89aebb2546.json") %>
