@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This was a project completed at the Flatiron School Full-Stack Software Engineering Bootcamp. This project was to create a full CRUD single page application, with at least three database models. 
 
-Things you may want to cover:
+This is the backend/API for this project. This is built on rails using active storage & google cloud stoarge for saving audio files. 
 
-* Ruby version
+Frontend Live: https://dawncronin.github.io/Impressionable-Frontend/
+Backend on Heroku: https://impressionable-backend.herokuapp.com/
+Frontend Repo: https://github.com/dawncronin/Impressionable-Frontend
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+"Impressionable" is a single page application where users signup or login, they can listen to famous lines from various movies, and add their attempt at the impression. This backend stores user login data, the movie quotes, and added impressions. 
